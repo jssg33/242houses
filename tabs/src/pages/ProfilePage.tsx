@@ -11,6 +11,7 @@ const ProfilePage: React.FC = () => (
     <IonContent className="ion-padding">
       User profile goes here
     </IonContent>
+    <ExploreContainer name="Tab 2 page" />
   </IonPage>
 );
 
