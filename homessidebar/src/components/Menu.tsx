@@ -50,7 +50,7 @@ const Menu: React.FC = () => {
   const location = useLocation();
 
   return (
-    <IonMenu contentId="main" type="overlay">
+    <IonMenu contentId="main" type="overlay" color="tertiary">
       <IonContent>
         <IonList id="inbox-list">
          <IonImg src={mylogo} className="MyLogo" alt="CockyLogo" style={{ width: "200px", height: "200px", margin: "0 auto" }} />
