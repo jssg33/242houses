@@ -1,0 +1,7 @@
+{
+  "name": "homessidebar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
