@@ -23,44 +23,26 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
+    title: 'Listings',
     url: '/folder/Inbox',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
   {
-    title: 'Outbox',
+    title: 'Admin',
     url: '/folder/Outbox',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
   {
-    title: 'Favorites',
+    title: 'Profile',
     url: '/folder/Favorites',
     iosIcon: heartOutline,
     mdIcon: heartSharp
   },
-  {
-    title: 'Archived',
-    url: '/folder/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
-  },
-  {
-    title: 'Trash',
-    url: '/folder/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/folder/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
-  }
-];
+ ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels = ['Saved', 'Recent', 'Cities', 'Zips'];
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -69,8 +51,8 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader>CockyRemaxInc</IonListHeader>
+          <IonNote>cockyremax@remax.com</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
