@@ -53,7 +53,7 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-         <IonImg src="{mylogo}" alt="CockyLogo"/>
+         <IonImg src={mylogo} className="MyLogo" alt="CockyLogo" style={{ width: "200px", height: "200px", margin: "0 auto" }} />
           <IonListHeader>CockyRemaxInc</IonListHeader>
           <IonNote>cockyremax@remax.com</IonNote>
           {appPages.map((appPage, index) => {
