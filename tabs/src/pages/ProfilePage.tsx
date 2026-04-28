@@ -1,5 +1,6 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from "@ionic/react";
 import React from "react";
+import ExploreContainer from '../components/ExploreContainer';
 const ProfilePage: React.FC = () => (
   <IonPage>
     <IonHeader>
