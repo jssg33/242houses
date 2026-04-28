@@ -8,11 +8,13 @@ import {
   IonMenu,
   IonMenuToggle,
   IonNote,
+  IonImg
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
 import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 import './Menu.css';
+import mylogo from '../assets/myimage.png';
 
 interface AppPage {
   url: string;
@@ -24,19 +26,19 @@ interface AppPage {
 const appPages: AppPage[] = [
   {
     title: 'Listings',
-    url: '/folder/Inbox',
+    url: '/folder/Listings',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
   {
     title: 'Admin',
-    url: '/folder/Outbox',
+    url: '/folder/Admin',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
   {
     title: 'Profile',
-    url: '/folder/Favorites',
+    url: '/folder/Profile',
     iosIcon: heartOutline,
     mdIcon: heartSharp
   },
@@ -51,6 +53,7 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
+         <IonImg src="{mylogo}" alt="CockyLogo"/>
           <IonListHeader>CockyRemaxInc</IonListHeader>
           <IonNote>cockyremax@remax.com</IonNote>
           {appPages.map((appPage, index) => {
