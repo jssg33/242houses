@@ -9,6 +9,7 @@ import {
   IonLabel,
   IonButton
 } from "@ionic/react";
+import React from "react";
 import { useEffect, useState } from "react";
 
 const API_ROOT = "https://api242.onrender.com/api/homes";
