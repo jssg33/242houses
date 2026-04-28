@@ -9,7 +9,6 @@ import { useHomes } from "../hooks/useHomes";
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
-
 const HomeListPage: React.FC = () => {
   const { homes, loading } = useHomes();
   const history = useHistory();
@@ -17,25 +16,21 @@ const HomeListPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar color="dark">
-          <IonTitle>Listings</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-<IonPage>
-      <IonHeader>
         <IonToolbar color="primary">
           <IonTitle>Listings</IonTitle>
         </IonToolbar>
       </IonHeader>
+
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Listings</IonTitle>
           </IonToolbar>
         </IonHeader>
+
         <ExploreContainer name="Listings Page" />
-         {loading && <IonSpinner />}
+
+        {loading && <IonSpinner />}
 
         {homes.map(home => (
           <IonCard
@@ -58,8 +53,6 @@ const HomeListPage: React.FC = () => {
         ))}
       </IonContent>
     </IonPage>
-
-          
   );
 };
 
