@@ -1,76 +1,64 @@
-import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
-  IonIcon,
-  IonLabel,
+  IonTabs,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs,
-  setupIonicReact
-} from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
-import Home from './pages/Home';
+  IonIcon,
+  IonLabel
+} from "@ionic/react";
+import React from "react";
+import { IonReactRouter } from "@ionic/react-router";
+import { Route, Redirect } from "react-router";
 
-/* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css';
+import { home, settings, person } from "ionicons/icons";
 
-/* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
+import HomeListPage from "./pages/HomeListPage";
+import AdminPage from "./pages/AdminPage";
+import ProfilePage from "./pages/ProfilePage";
 
-/* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
+const App: React.FC = () => {
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <IonTabs>
 
-/* Theme variables */
-import './theme/variables.css';
+          {/* ROUTES */}
+          <IonRouterOutlet>
 
-setupIonicReact();
+            <Route exact path="/listings" component={HomeListPage} />
+            <Route exact path="/admin" component={AdminPage} />
+            <Route exact path="/profile" component={ProfilePage} />
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route path="/tab1" element={<Tab1 />} />
-         <Route path="/tab2" element={<Tab2 />} />
-          <Route path="/tab3" element={<Tab3 />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Home />} />
-          
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Properties</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Search</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Profile</IonLabel>
-          <IonTabButton tab="tab4" href="/tab4">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+            {/* Default redirect */}
+            <Redirect exact from="/" to="/listings" />
+
+          </IonRouterOutlet>
+
+          {/* TAB BAR */}
+          <IonTabBar slot="bottom">
+
+            <IonTabButton tab="listings" href="/listings">
+              <IonIcon icon={home} />
+              <IonLabel>Listings</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab="admin" href="/admin">
+              <IonIcon icon={settings} />
+              <IonLabel>Admin</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab="profile" href="/profile">
+              <IonIcon icon={person} />
+              <IonLabel>Profile</IonLabel>
+            </IonTabButton>
+
+          </IonTabBar>
+
+        </IonTabs>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
