@@ -6,6 +6,9 @@ import {
 import React from "react";
 import { useHistory } from "react-router";
 import { useHomes } from "../hooks/useHomes";
+import ExploreContainer from '../components/ExploreContainer';
+import './Tab1.css';
+
 
 const HomeListPage: React.FC = () => {
   const { homes, loading } = useHomes();
