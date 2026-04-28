@@ -3,7 +3,7 @@ import {
   IonContent, IonList, IonItem, IonLabel, IonButton
 } from "@ionic/react";
 import { useHomes } from "../hooks/useHomes";
-
+import React from "react";
 const AdminPage: React.FC = () => {
   const { homes, deleteHome } = useHomes();
 
