@@ -3,6 +3,7 @@ import {
   IonContent, IonCard, IonCardHeader, IonCardTitle,
   IonCardContent, IonImg, IonSpinner
 } from "@ionic/react";
+import React from "react";
 import { useHistory } from "react-router";
 import { useHomes } from "../hooks/useHomes";
 
