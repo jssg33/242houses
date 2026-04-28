@@ -1,18 +1,21 @@
+import React from 'react';
+import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
-  IonTabs,
+  IonIcon,
+  IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonIcon,
-  IonLabel
-} from "@ionic/react";
-import React from "react";
-import { IonReactRouter } from "@ionic/react-router";
-import { Route, Redirect } from "react-router";
-
-import { home, settings, person } from "ionicons/icons";
-
+  IonTabs,
+  setupIonicReact
+} from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
+import { home, settings, person, ellipse, square, triangle } from 'ionicons/icons';
+import Tab1 from './pages/Tab1';
+import Tab2 from './pages/Tab2';
+import Tab3 from './pages/Tab3';
+import Home from './pages/Home';
 import HomeListPage from "./pages/HomeListPage";
 import AdminPage from "./pages/AdminPage";
 import ProfilePage from "./pages/ProfilePage";
