@@ -22,8 +22,20 @@ const HomeListPage: React.FC = () => {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent className="ion-padding">
-        {loading && <IonSpinner />}
+<IonPage>
+      <IonHeader>
+        <IonToolbar color="primary">
+          <IonTitle>Listings</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Listings</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <ExploreContainer name="Listings Page" />
+         {loading && <IonSpinner />}
 
         {homes.map(home => (
           <IonCard
@@ -46,6 +58,8 @@ const HomeListPage: React.FC = () => {
         ))}
       </IonContent>
     </IonPage>
+
+          
   );
 };
 
