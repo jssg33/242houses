@@ -111,3 +111,11 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 } 
+
+MyLogo
+{
+text-align: center;
+margin: 0 auto;
+width: 200px;
+height: 200px;
+}
