@@ -2,6 +2,7 @@ import {
   IonPage, IonHeader, IonToolbar, IonTitle,
   IonContent, IonImg, IonSpinner
 } from "@ionic/react";
+import React from "react";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { useHomes } from "../hooks/useHomes";
