@@ -1,5 +1,5 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from "@ionic/react";
-
+import React from "react";
 const ProfilePage: React.FC = () => (
   <IonPage>
     <IonHeader>
