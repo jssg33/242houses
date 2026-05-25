@@ -6,7 +6,7 @@ import './Tab1.css';
 const Project7Frame: React.FC = () => {
   return (
     <iframe
-      src="https://jssg33.github.io/usc242/project7/index.html"
+      src="https://jssg33.github.io/usc242/project/finalhomes/index.html"
       title="Homes Frame"
       style={{
         width: "100%",
@@ -22,8 +22,7 @@ const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Homes</IonTitle>
+        <IonToolbar><IonHeader></IonHeader>
         </IonToolbar>
       </IonHeader>
 
