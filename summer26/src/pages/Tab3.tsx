@@ -18,7 +18,7 @@ const Project7Frame: React.FC = () => {
   );
 };
 
-const Tab1: React.FC = () => {
+const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
