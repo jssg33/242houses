@@ -1,6 +1,8 @@
 {
   "name": "summer26",
   "private": true,
+  "homepage": "./",
+  "PUBLIC_URL=":"/usc242/projects/homesfinal/reactfinal/",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
